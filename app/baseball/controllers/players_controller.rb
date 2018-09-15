@@ -1,2 +1,2 @@
-class PlayersController < ApplicationController
+class PlayersController < BaseballController
 end
