@@ -10,11 +10,11 @@ class BaseballController < Sinatra::Base
     set :session_secret, "password_security"
    end
 
-   get '/baseball' do
+   get  '/baseball' do
     # if logged_in?
     #   redirect to '/tweets'
     # else
-      erb :b_index
+      erb :'/b_index'
     # end
    end
 
