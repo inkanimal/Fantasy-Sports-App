@@ -1,0 +1,12 @@
+<h2>Welcome, <%=@user.username%></h2>
+
+<h1>Please create a team name.</h1>
+
+<br><br>
+<form action="/teams" method="post" id="new_team">
+   <label for="content">Name Team: </label>
+   <input type="text" name="team_name" id="team_name"><br>
+   <input type="submit" id="submit" id="submit" value="Name Team">
+ </form>
+<br></br>
+<a href="/logout"><input type="submit" id="submit" value="Logout"></a>
