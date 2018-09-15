@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "password_security"
    end
 
-   get '/' do
+   get '/app' do
     # if logged_in?
     #   redirect to '/tweets'
     # else
