@@ -10,35 +10,33 @@ class BaseballController < Sinatra::Base
     set :session_secret, "password_security"
    end
 
-   get '/' do
+   get '/baseball' do
     # if logged_in?
     #   redirect to '/tweets'
     # else
-      erb :index
+      erb :b_index
     # end
    end
 
    get '/signup' do
     if logged_in?
-     redirect to '/tweets'
+     redirect to '/home'
     else
-     erb :'users/create_user'
+     erb :'users/signup'
     end
    end
 
-  post "/signup" do
+   post "/signup" do
      if params[:username].empty? || params[:password].empty? || params[:email].empty?
       redirect  '/signup'
-    else
-    user = User.new(username: params["username"], email: params["email"], password: params["password"])
-
-     if  user.save
-       session[:user_id] = user.id
-
-       redirect "/tweets"
+     else
+      user = User.new(username: params["username"], email: params["email"], password: params["password"])
+      if  user.save
+        session[:user_id] = user.id
+        redirect "/home"
+      end
      end
    end
- end
 
 
  end
