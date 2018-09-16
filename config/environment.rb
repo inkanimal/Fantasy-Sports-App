@@ -9,3 +9,9 @@ ActiveRecord::Base.establish_connection(
 )
 
 require_all 'app'
+
+core:
+customFileTypes:
+“text.html.ruby”: [
+“erb”
+]

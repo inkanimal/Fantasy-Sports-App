@@ -33,7 +33,7 @@ class BaseballController < Sinatra::Base
       user = User.new(username: params["username"], email: params["email"], password: params["password"])
       if  user.save
         session[:user_id] = user.id
-        redirect "/create_team"
+        redirect "/app/baseball/views/teams/create_team"
       end
      end
    end
